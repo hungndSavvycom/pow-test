@@ -1,13 +1,14 @@
-import { useListSpell } from 'hooks/useListSpell';
 import React, { useMemo } from 'react';
 import type { ColumnsType } from 'antd/es/table';
 import { SpellObjectType } from 'interfaces/spell';
 import ListActionDropdown from 'components/Dropdown/ListActionDropdown';
 import ListComponent from 'components/List';
-import classes from './HomePage.module.scss';
+import { useSelector } from 'react-redux';
+import { selectFavouriteSpellData } from 'stores/slices/spell/selectors';
+import classes from './Favourite.module.scss';
 
-const HomeComponent = () => {
-  const { spellData, loading } = useListSpell();
+const FavouriteComponent = () => {
+  const favouriteData = useSelector(selectFavouriteSpellData);
   const columns: ColumnsType<SpellObjectType> = useMemo(() => {
     return [
       {
@@ -36,13 +37,13 @@ const HomeComponent = () => {
         },
       },
     ];
-  }, []);
+  }, [favouriteData]);
 
   return (
     <div className={classes.container}>
-      <ListComponent data={spellData?.results} loading={loading} columns={columns} />
+      <ListComponent data={favouriteData} loading={false} columns={columns} />
     </div>
   );
 };
 
-export default HomeComponent;
+export default FavouriteComponent;

@@ -19,7 +19,7 @@ const ListComponent: React.FC<ListComponentProps> = (props) => {
 
   return (
     <div className={classes.container}>
-      <Table dataSource={data} columns={columns} />
+      <Table rowKey="index" dataSource={data} columns={columns} />
     </div>
   );
 };

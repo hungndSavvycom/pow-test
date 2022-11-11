@@ -39,7 +39,7 @@ export interface SpellDetailItem {
   range: string;
   components: SpellComponentEnum;
   material: string;
-  area_of_effect: {
+  area_of_effect?: {
     size: number;
     type: AreaEffectType;
   };
@@ -50,9 +50,9 @@ export interface SpellDetailItem {
   level: number;
   attack_type: string;
   damage: DamageType;
-  school: DamageType;
-  classes: DamageType[];
-  subclasses: DamageType[];
+  school: SpellObjectType;
+  classes: SpellObjectType[];
+  subclasses: SpellObjectType[];
 }
 
 export interface SpellRequest {
@@ -68,3 +68,5 @@ export interface SpellDataResponse {
   count: number;
   results: SpellObjectType[];
 }
+
+export type FavouriteType = 'add' | 'remove';

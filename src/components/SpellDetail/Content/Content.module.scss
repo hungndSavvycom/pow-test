@@ -1,0 +1,23 @@
+.grid{
+    display: grid;
+    grid-template-areas: 
+    'introduction overall'
+    'class overall'
+    ;
+    grid-template-rows: min-content 1fr;
+    gap: 16px 20px;
+    grid-template-columns: 1fr 400px;
+}
+
+@media screen and (max-width: 600px) {
+    .grid{
+        grid-template-areas: 
+        'introduction'
+        'class'
+        'overall'
+        ;
+        gap: 16px 0px;
+        grid-template-columns: 1fr;
+    }
+
+}

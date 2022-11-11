@@ -1,3 +1,15 @@
+@import 'styles/scss/colors';
+
 .container{
-    
+    width: 100%;
+    padding: 16px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading{
+    color: $ink_600;
 }

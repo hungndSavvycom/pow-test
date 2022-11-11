@@ -1,3 +1,18 @@
+@import 'styles/scss/colors';
+@import 'styles/scss/common';
+
 .container{
+    @extend .card;
     grid-area: class;
+}
+
+.itemContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.classContainer{
+    @include item(8px);
 }

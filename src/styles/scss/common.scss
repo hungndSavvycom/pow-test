@@ -1,3 +1,5 @@
+@import 'styles/scss/colors';
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -5,9 +7,35 @@
 }
 
 @mixin text-base{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 20px;
+    color: $ink_600;
+}
+
+@mixin item($radius: 4px){
+    width: 100%;
+    border: 1px solid $ink_50;
+    border-radius: $radius;
+    padding: 24px;
+    &__title{
+        @include text-base;
+        font-weight: bold;
+    }
+    &__value{
+        @include text-base;
+    }
+}
+
+
+.card{
+    border: 1px solid $ink_100;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.item{
+
 }
 
 .truncate-1-line {

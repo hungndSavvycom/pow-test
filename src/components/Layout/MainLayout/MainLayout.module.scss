@@ -8,6 +8,12 @@
     padding: 24px;
 }
 
-.footer{
-    text-align: center;
+@media screen and (max-width: 600px) {
+    .content{
+        padding: 0px;
+    }
+    .container{
+        overflow-x: scroll;
+        padding: 16px;
+    }
 }
