@@ -3,7 +3,11 @@ import React from 'react';
 import classes from './Footer.module.scss';
 
 const FooterLayout = () => {
-  return <Footer className={classes.footer}>Design Created by SVC</Footer>;
+  return (
+    <Footer data-testid="footer" className={classes.footer}>
+      Design Created by SVC
+    </Footer>
+  );
 };
 
 export default FooterLayout;

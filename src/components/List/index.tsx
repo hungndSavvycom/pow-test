@@ -15,10 +15,10 @@ const ListComponent: React.FC<ListComponentProps> = (props) => {
 
   if (loading) return <SkeletonList />;
 
-  if (!data || !data.length) return <Empty />;
+  if (!data || !data.length) return <Empty data-testid="empty-table" />;
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} data-testid="list-table">
       <Table rowKey="index" dataSource={data} columns={columns} />
     </div>
   );

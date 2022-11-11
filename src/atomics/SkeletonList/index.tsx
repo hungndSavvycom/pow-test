@@ -8,6 +8,7 @@ const listData = Array.from({ length: 4 }).map((_) => {
 const SkeletonList: React.FC = () => {
   return (
     <List
+      data-testid="loading-table"
       itemLayout="vertical"
       size="large"
       dataSource={listData}

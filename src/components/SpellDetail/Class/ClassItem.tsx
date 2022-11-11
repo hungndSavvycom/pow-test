@@ -14,7 +14,9 @@ const ClassItem: React.FC<IProps> = (props) => {
     return (
       <div key={value.index} className={classes.classContainer}>
         <span className={classes.classContainer__title}>{'Name: '}</span>
-        <span className={classes.classContainer__value}>{value.name}</span>
+        <span data-testid="class-item-name" className={classes.classContainer__value}>
+          {value.name}
+        </span>
         <Divider />
         <span className={classes.classContainer__title}>{'URL: '}</span>
         <span className={classes.classContainer__value}>{value.url}</span>

@@ -11,6 +11,7 @@ import classes from './SpellDetail.module.scss';
 const SpellDetailComponent = () => {
   const { index } = useParams();
   const { data, isLoading, isError } = useSpellDetailQuery({ index });
+  console.log('🚀 ~ file: index.tsx ~ line 14 ~ SpellDetailComponent ~ data', data);
 
   const generateListItem = useMemo(() => {
     if (data) {
@@ -26,6 +27,7 @@ const SpellDetailComponent = () => {
       url: '',
     };
   }, [data]) as SpellObjectType;
+  console.log('🚀 ~ file: index.tsx ~ line 30 ~ generateListItem ~ generateListItem', generateListItem);
 
   const { isFavourite, onUpdateFavourite } = useFavourite(generateListItem);
 

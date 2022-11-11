@@ -37,7 +37,7 @@ export interface SpellDetailItem {
   desc: string[];
   higher_level: string[];
   range: string;
-  components: SpellComponentEnum;
+  components: SpellComponentEnum[];
   material: string;
   area_of_effect?: {
     size: number;

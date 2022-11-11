@@ -15,8 +15,13 @@ interface IProps {
 const SpellContent: React.FC<IProps> = (props) => {
   const { item, loading, isError } = props;
 
-  if (loading) return <Skeleton active />;
-  if (isError || !item) return <Empty />;
+  if (loading)
+    return (
+      <div data-testid="loading-detail-spell">
+        <Skeleton active />
+      </div>
+    );
+  if (isError || !item) return <Empty data-testid="empty-detail-spell" />;
 
   return (
     <div className={classes.grid}>

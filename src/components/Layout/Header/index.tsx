@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const HeaderLayout = () => {
   const location = useLocation();
+  console.log('🚀 ~ file: index.tsx ~ line 8 ~ HeaderLayout ~ location', location.pathname);
 
   const activePath = useMemo(() => {
     let pathKey = '1';

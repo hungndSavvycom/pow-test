@@ -10,7 +10,7 @@ interface IProps {
 const SpellIntroduction = (props: IProps) => {
   const { item } = props;
   return (
-    <div className={classes.container}>
+    <div data-testid="spell-introduction" className={classes.container}>
       <div>
         <h2 className={classes.content__label}>Name</h2>
         <p className={classes.content__description}>{item.name}</p>

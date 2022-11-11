@@ -11,7 +11,7 @@ interface DetailProps {
 const SpellClass: React.FC<DetailProps> = (props) => {
   const { item } = props;
   return (
-    <div className={classes.container}>
+    <div data-testid="spell-class" className={classes.container}>
       <Tabs
         tabPosition="top"
         defaultActiveKey="1"

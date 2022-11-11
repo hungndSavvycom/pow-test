@@ -29,9 +29,14 @@ const ListActionDropdown: React.FC<IProps> = (props) => {
     ];
   }, [isFavourite, item.index, onUpdateFavourite]);
   return (
-    <Dropdown trigger={['click']} placement="bottom" menu={{ items }}>
-      <Button>Actions</Button>
-    </Dropdown>
+    <>
+      <div data-testid="favourite-menu" style={{ display: 'none' }} aria-hidden>
+        {isFavourite ? 'Remove from Favourite' : 'Add to Favourite'}
+      </div>
+      <Dropdown trigger={['click']} placement="bottom" menu={{ items }}>
+        <Button data-testid="action-button">Actions</Button>
+      </Dropdown>
+    </>
   );
 };
 

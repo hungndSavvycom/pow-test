@@ -20,7 +20,7 @@ export const useFavourite = (item: SpellObjectType) => {
     } else {
       message.success('Added to favourite');
     }
-  }, [isFavourite]);
+  }, [dispatch, isFavourite, item]);
 
   return { isFavourite, onUpdateFavourite };
 };

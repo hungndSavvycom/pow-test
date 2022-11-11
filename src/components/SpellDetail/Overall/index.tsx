@@ -54,7 +54,7 @@ const SpellOverall = (props: IProps) => {
     ];
   }, [item]);
   return (
-    <div className={classes.container}>
+    <div data-testid="spell-overall" className={classes.container}>
       {overallData.map((itemOverall) => {
         return <OverallItem key={itemOverall.index} label={itemOverall.label} value={itemOverall.value} />;
       })}
