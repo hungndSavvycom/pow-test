@@ -1,17 +1,17 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { FavouriteType, SpellObjectType } from 'interfaces/spell';
+import { FavouriteType, SpellListItem, SpellObjectType } from 'interfaces/spell';
 import { PersistConfig, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import _ from 'lodash';
 
 export interface SpellFavouritePayload {
-  item: SpellObjectType;
+  item: SpellListItem;
   type: FavouriteType;
 }
 export interface SpellState {
   spells: SpellObjectType[];
-  favouriteSpells: SpellObjectType[];
+  favouriteSpells: SpellListItem[];
 }
 
 const initialState: SpellState = {

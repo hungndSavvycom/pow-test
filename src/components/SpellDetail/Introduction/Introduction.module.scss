@@ -4,14 +4,22 @@
 .container{
     @extend .card;
     grid-area: introduction;
+    box-shadow: 0px 3px 10px rgba(27, 27, 27, 0.08);
 }
 
 .content{
     &__label{
         @include text-base;
+        font-size: 18px;
         font-weight: bold;
     }
     &__description{
         @include text-base;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        box-shadow: none;
     }
 }

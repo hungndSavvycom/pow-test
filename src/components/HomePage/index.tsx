@@ -1,15 +1,23 @@
 import { useListSpell } from 'hooks/useListSpell';
 import React, { useMemo } from 'react';
 import type { ColumnsType } from 'antd/es/table';
-import { SpellObjectType } from 'interfaces/spell';
-import ListActionDropdown from 'components/Dropdown/ListActionDropdown';
-import ListComponent from 'components/List';
+import { SpellListItem } from 'interfaces/spell';
+import ListComponent from 'commons/List';
+import ListActionDropdown from 'commons/Dropdown/ListActionDropdown';
 import classes from './HomePage.module.scss';
 
 const HomeComponent = () => {
   const { spellData, loading } = useListSpell();
-  const columns: ColumnsType<SpellObjectType> = useMemo(() => {
+  const columns: ColumnsType<SpellListItem> = useMemo(() => {
     return [
+      {
+        title: 'ID',
+        dataIndex: 'id',
+        key: 'id',
+        sorter: (a, b) => {
+          return (a.id || 0) - (b.id || 0);
+        },
+      },
       {
         title: 'Index',
         dataIndex: 'index',
@@ -40,7 +48,7 @@ const HomeComponent = () => {
 
   return (
     <div className={classes.container}>
-      <ListComponent data={spellData?.results} loading={loading} columns={columns} />
+      <ListComponent data={spellData} loading={loading} columns={columns} />
     </div>
   );
 };

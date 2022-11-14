@@ -1,0 +1,25 @@
+@import 'styles/scss/colors';
+
+.box{
+    position: relative;
+    padding-top: 10px;
+}
+
+.container{
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid $ink_100;
+    padding: 0 16px;
+}
+
+.label{
+    position: absolute;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 0px 8px;
+    left: 10px;
+    top: -2px;
+    z-index: 2;
+    font-weight: 500;
+}

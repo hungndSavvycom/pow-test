@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSpellDetailQuery } from 'stores/slices/api';
 import { HeartFilled, HeartOutlined } from '@ant-design/icons';
-import { SpellObjectType } from 'interfaces/spell';
+import { SpellListItem, SpellObjectType } from 'interfaces/spell';
 import { useFavourite } from 'hooks/useFavourite';
 import SpellContent from './Content';
 import classes from './SpellDetail.module.scss';
@@ -11,7 +11,6 @@ import classes from './SpellDetail.module.scss';
 const SpellDetailComponent = () => {
   const { index } = useParams();
   const { data, isLoading, isError } = useSpellDetailQuery({ index });
-  console.log('🚀 ~ file: index.tsx ~ line 14 ~ SpellDetailComponent ~ data', data);
 
   const generateListItem = useMemo(() => {
     if (data) {
@@ -26,8 +25,7 @@ const SpellDetailComponent = () => {
       name: '',
       url: '',
     };
-  }, [data]) as SpellObjectType;
-  console.log('🚀 ~ file: index.tsx ~ line 30 ~ generateListItem ~ generateListItem', generateListItem);
+  }, [data]) as SpellListItem;
 
   const { isFavourite, onUpdateFavourite } = useFavourite(generateListItem);
 
@@ -36,7 +34,11 @@ const SpellDetailComponent = () => {
       <div className={classes.header}>
         <h1 className={classes.heading}>Spell Detail</h1>
         {data && (
-          <Button onClick={onUpdateFavourite} icon={isFavourite ? <HeartFilled /> : <HeartOutlined />}>
+          <Button
+            className={classes[`button${isFavourite ? '__active' : ''}`]}
+            onClick={onUpdateFavourite}
+            icon={isFavourite ? <HeartFilled /> : <HeartOutlined />}
+          >
             {isFavourite ? 'Remove from Favourite' : 'Add to Favourite'}
           </Button>
         )}

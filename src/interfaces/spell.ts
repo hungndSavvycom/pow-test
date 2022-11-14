@@ -22,6 +22,10 @@ export interface SpellObjectType {
   url: string;
 }
 
+export interface SpellListItem extends SpellObjectType {
+  id?: number;
+}
+
 export interface DamageType {
   damage_at_slot_level: {
     [x: string]: any;

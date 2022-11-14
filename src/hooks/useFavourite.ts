@@ -1,12 +1,12 @@
 import { message } from 'antd';
-import { SpellObjectType } from 'interfaces/spell';
+import { SpellListItem } from 'interfaces/spell';
 import { useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { spellActions } from 'stores/slices/spell';
 import { selectFavouriteSpellData } from 'stores/slices/spell/selectors';
 import { checkIsItemFavourited } from 'utils/favourite';
 
-export const useFavourite = (item: SpellObjectType) => {
+export const useFavourite = (item: SpellListItem) => {
   const favouriteData = useSelector(selectFavouriteSpellData);
   const dispatch = useDispatch();
   const isFavourite = useMemo(() => {

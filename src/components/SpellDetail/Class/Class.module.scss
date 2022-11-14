@@ -4,6 +4,7 @@
 .container{
     @extend .card;
     grid-area: class;
+    box-shadow: 0px 3px 10px rgba(27, 27, 27, 0.08);
 }
 
 .itemContainer{
@@ -15,4 +16,10 @@
 
 .classContainer{
     @include item(8px);
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        box-shadow: none;
+    }
 }

@@ -33,3 +33,19 @@ a {
   margin-bottom: 0px;
   line-height: 22px;
 }
+
+
+::-webkit-scrollbar {
+  width: 6.75px;
+  height: 6.75px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 1rem 1rem white;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: rgba(181, 189, 198, 1);
+}

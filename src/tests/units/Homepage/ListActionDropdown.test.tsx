@@ -1,9 +1,9 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { spellDetail, spellList } from 'assets/data/spells';
+import { spellList } from 'assets/data/spells';
 import configureMockStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import ListActionDropdown from 'components/Dropdown/ListActionDropdown';
+import ListActionDropdown from 'commons/Dropdown/ListActionDropdown';
 
 const mockStore = configureMockStore();
 
@@ -17,7 +17,7 @@ describe('Test ListActionDropdown', () => {
     render(
       <BrowserRouter>
         <Provider store={store}>
-          <ListActionDropdown item={spellDetail} />
+          <ListActionDropdown item={spellList.results[0]} />
         </Provider>
       </BrowserRouter>,
     );

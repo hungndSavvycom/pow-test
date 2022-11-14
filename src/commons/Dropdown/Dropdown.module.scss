@@ -1,21 +1,14 @@
 @import 'styles/scss/colors';
 
 .container{
-    width: 100%;
-    padding: 16px;
-}
-
-.header{
     display: flex;
-    justify-content: space-between;
-}
-
-.heading{
-    color: $ink_600;
-    font-weight: 600;
+    flex-direction: row;
+    gap: 12px;
+    width: 80%;
 }
 
 .button{
+    width: 50%;
     border-radius: 4px;
     &__active{
         @extend .button;
@@ -24,13 +17,12 @@
 }
 
 @media screen and (max-width: 600px) {
-    .header{
+    .container{
         flex-direction: column;
+        gap: 14px;
+        width: 100%;
     }
     .button{
-        margin-top: 5px;
-    }
-    .heading{
-        font-size: 22px;
+        width: 100%;
     }
 }

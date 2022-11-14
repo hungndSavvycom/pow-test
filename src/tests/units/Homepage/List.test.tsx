@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import type { ColumnsType } from 'antd/es/table';
 import { spellList } from 'assets/data/spells';
-import ListComponent from 'components/List';
+import ListComponent from 'commons/List';
 import { SpellObjectType } from 'interfaces/spell';
+import { BrowserRouter } from 'react-router-dom';
 
 Object.defineProperty(window, 'matchMedia', {
   value: () => {
@@ -32,7 +33,11 @@ describe('Test List table component', () => {
     },
   ];
   test('Is loading component', () => {
-    render(<ListComponent columns={columns} loading />);
+    render(
+      <BrowserRouter>
+        <ListComponent columns={columns} loading />
+      </BrowserRouter>,
+    );
 
     const loadingSkeleton = screen.getByTestId('loading-table');
 
@@ -40,7 +45,11 @@ describe('Test List table component', () => {
   });
 
   test('Is empty component', () => {
-    render(<ListComponent columns={columns} loading={false} />);
+    render(
+      <BrowserRouter>
+        <ListComponent columns={columns} loading={false} />
+      </BrowserRouter>,
+    );
 
     const emptyComponent = screen.getByTestId('empty-table');
 
@@ -48,7 +57,11 @@ describe('Test List table component', () => {
   });
 
   test('Exist data', () => {
-    render(<ListComponent columns={columns} loading={false} data={spellList.results} />);
+    render(
+      <BrowserRouter>
+        <ListComponent columns={columns} loading={false} data={spellList.results} />
+      </BrowserRouter>,
+    );
 
     const emptyComponent = screen.getByTestId('list-table');
 
