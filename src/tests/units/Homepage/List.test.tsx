@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import type { ColumnsType } from 'antd/es/table';
 import { spellList } from 'assets/data/spells';
-import ListComponent from 'commons/List';
-import { SpellObjectType } from 'interfaces/spell';
+import ListComponent from 'components/common/List';
+import { SpellObjectType } from 'utils/interfaces/spell';
 import { BrowserRouter } from 'react-router-dom';
 
 Object.defineProperty(window, 'matchMedia', {

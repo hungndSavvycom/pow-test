@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { FavouriteType, SpellListItem, SpellObjectType } from 'interfaces/spell';
+import { FavouriteType, SpellListItem, SpellObjectType } from 'utils/interfaces/spell';
 import { PersistConfig, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import _ from 'lodash';

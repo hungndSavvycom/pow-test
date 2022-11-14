@@ -18,6 +18,6 @@
   },
   "include": [
     "**/*.ts", "**/*.tsx", "src/*"
-  ],
+, "src/utils/interfaces"  ],
   "exclude": ["node_modules"]
 }

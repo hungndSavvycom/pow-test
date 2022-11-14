@@ -1,4 +1,4 @@
-import { SpellObjectType } from 'interfaces/spell';
+import { SpellObjectType } from 'utils/interfaces/spell';
 import _ from 'lodash';
 
 export const checkIsItemFavourited = (index: string, data: SpellObjectType[]) => {

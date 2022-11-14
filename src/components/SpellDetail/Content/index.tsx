@@ -1,5 +1,5 @@
 import { Empty, Skeleton } from 'antd';
-import { SpellDetailItem } from 'interfaces/spell';
+import { SpellDetailItem } from 'utils/interfaces/spell';
 import React from 'react';
 import SpellClass from '../Class';
 import SpellIntroduction from '../Introduction';

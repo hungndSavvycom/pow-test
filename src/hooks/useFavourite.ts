@@ -1,5 +1,5 @@
 import { message } from 'antd';
-import { SpellListItem } from 'interfaces/spell';
+import { SpellListItem } from 'utils/interfaces/spell';
 import { useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { spellActions } from 'stores/slices/spell';

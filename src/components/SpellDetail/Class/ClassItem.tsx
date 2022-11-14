@@ -1,5 +1,5 @@
 import { Divider } from 'antd';
-import { SpellObjectType } from 'interfaces/spell';
+import { SpellObjectType } from 'utils/interfaces/spell';
 import React, { useCallback } from 'react';
 import classes from './Class.module.scss';
 

@@ -1,4 +1,4 @@
-import { SpellDetailItem } from 'interfaces/spell';
+import { SpellDetailItem } from 'utils/interfaces/spell';
 import React, { useMemo } from 'react';
 import classes from './Overall.module.scss';
 import OverallItem from './OverallItem';

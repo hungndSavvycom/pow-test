@@ -1,5 +1,5 @@
 import { Divider } from 'antd';
-import { SpellDetailItem } from 'interfaces/spell';
+import { SpellDetailItem } from 'utils/interfaces/spell';
 import React from 'react';
 import classes from './Introduction.module.scss';
 

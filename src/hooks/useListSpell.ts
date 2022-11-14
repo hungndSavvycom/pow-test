@@ -1,4 +1,4 @@
-import { SpellObjectType } from 'interfaces/spell';
+import { SpellObjectType } from 'utils/interfaces/spell';
 import { useState } from 'react';
 import { useSpellQuery } from 'stores/slices/api';
 import { serializeDataWithId } from 'utils/list';

@@ -1,4 +1,4 @@
-import { SpellComponentEnum, SpellDetailItem } from 'interfaces/spell';
+import { SpellComponentEnum, SpellDetailItem } from 'utils/interfaces/spell';
 
 export const spellList = {
   count: 300,

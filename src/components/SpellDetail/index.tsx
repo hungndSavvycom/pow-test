@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSpellDetailQuery } from 'stores/slices/api';
 import { HeartFilled, HeartOutlined } from '@ant-design/icons';
-import { SpellListItem, SpellObjectType } from 'interfaces/spell';
+import { SpellListItem, SpellObjectType } from 'utils/interfaces/spell';
 import { useFavourite } from 'hooks/useFavourite';
 import SpellContent from './Content';
 import classes from './SpellDetail.module.scss';

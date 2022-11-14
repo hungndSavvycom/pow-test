@@ -2,7 +2,7 @@
 import { EyeOutlined, HeartFilled, HeartOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 import { useFavourite } from 'hooks/useFavourite';
-import { SpellListItem } from 'interfaces/spell';
+import { SpellListItem } from 'utils/interfaces/spell';
 import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import classes from './Dropdown.module.scss';

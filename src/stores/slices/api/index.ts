@@ -1,6 +1,6 @@
 import type { FetchArgs } from '@reduxjs/toolkit/query/react';
 import { createApi } from '@reduxjs/toolkit/query/react';
-import { SpellDataResponse, SpellDetailItem, SpellDetailRequest, SpellRequest } from 'interfaces/spell';
+import { SpellDataResponse, SpellDetailItem, SpellDetailRequest, SpellRequest } from 'utils/interfaces/spell';
 import { axiosBaseQuery } from 'services/baseQuery';
 
 export const apiSlice = createApi({

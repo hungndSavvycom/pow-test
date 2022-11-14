@@ -1,9 +1,9 @@
 import { useListSpell } from 'hooks/useListSpell';
 import React, { useMemo } from 'react';
 import type { ColumnsType } from 'antd/es/table';
-import { SpellListItem } from 'interfaces/spell';
-import ListComponent from 'commons/List';
-import ListActionDropdown from 'commons/Dropdown/ListActionDropdown';
+import { SpellListItem } from 'utils/interfaces/spell';
+import ListComponent from 'components/common/List';
+import ListActionDropdown from 'components/common/Dropdown/ListActionDropdown';
 import classes from './HomePage.module.scss';
 
 const HomeComponent = () => {

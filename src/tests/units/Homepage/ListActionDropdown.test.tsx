@@ -3,7 +3,7 @@ import { spellList } from 'assets/data/spells';
 import configureMockStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import ListActionDropdown from 'commons/Dropdown/ListActionDropdown';
+import ListActionDropdown from 'components/common/Dropdown/ListActionDropdown';
 
 const mockStore = configureMockStore();
 

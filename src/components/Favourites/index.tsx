@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
 import type { ColumnsType } from 'antd/es/table';
-import { SpellListItem } from 'interfaces/spell';
-import ListComponent from 'commons/List';
+import { SpellListItem } from 'utils/interfaces/spell';
+import ListComponent from 'components/common/List';
 import { useSelector } from 'react-redux';
 import { selectFavouriteSpellData } from 'stores/slices/spell/selectors';
-import ListActionDropdown from 'commons/Dropdown/ListActionDropdown';
+import ListActionDropdown from 'components/common/Dropdown/ListActionDropdown';
 import classes from './Favourite.module.scss';
 
 const FavouriteComponent = () => {
